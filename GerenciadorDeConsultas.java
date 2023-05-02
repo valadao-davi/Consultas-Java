@@ -31,7 +31,11 @@ public class GerenciadorDeConsultas {
     
     //metodo remover consultas
     public void removerConsulta(int numero){
-        consultar.remove(numero);
+        if (numero < 0 || numero > consultar.size() )
+        System.out.println("Index não existe");
+        else{
+            consultar.remove(numero);
+        }
     }
 
     public static void main(String[] args){
